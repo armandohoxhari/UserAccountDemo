@@ -99,6 +99,18 @@ def viewrec():
             con.close()
 
 
+@app.route('/randomrec')
+def view_random():
+    return render_template('randomr.html')
+
+@app.route('/specific')
+def view_specific():
+    return render_template('spec.html')
+
+@app.route('/location')
+def view_location():
+    return render_template('loc.html')
+
 @app.route('/updaterec', methods=['POST', 'GET'])
 def updaterec():
     if request.method == 'POST':
